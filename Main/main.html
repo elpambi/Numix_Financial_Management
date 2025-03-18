@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gestiona tus ingresos y gastos fácilmente. Visualiza estadísticas y controla tu economía personal con Numix.">
+    <title>Numix | Tu gestor de finanzas</title>
+    <link rel="shortcut icon" href="assets/img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <main class="main">
+        <div class="title">
+            <h1>Numix</h1>
+        </div>
+
+        <!-- Ingresos -->
+        <fieldset class="ingresos">
+            <legend>Ingresos</legend>
+            <input type="number" id="ingresos" placeholder="Monto de ingresos">
+        </fieldset>
+
+        <!-- Balance -->
+        <fieldset class="balance" id="estadisticas">
+            <legend>Balance</legend>
+            <canvas id="graficoEstadisticas" width="400" height="200"></canvas>
+        </fieldset>
+
+        <!-- Gastos -->
+        <fieldset class="gastos">
+            <legend>Gastos</legend>
+            <input type="number" id="gastos" placeholder="Monto de gastos">
+        </fieldset>
+
+        <!-- Categoría de Gasto -->
+        <fieldset class="categorias">
+            <legend>Categoría de Gasto</legend>
+            <button class="btn-categoria" id="categoria-alimentos">Alimentos</button>
+            <button class="btn-categoria" id="categoria-transporte">Transporte</button>
+            <button class="btn-categoria" id="categoria-entretenimiento">Entretenimiento</button>
+        </fieldset>
+
+        <!-- Fecha -->
+        <fieldset class="fecha">
+            <legend>Mes</legend>
+            <button class="btn-fecha" id="fecha-enero">Enero</button>
+            <button class="btn-fecha" id="fecha-febrero">Febrero</button>
+            <button class="btn-fecha" id="fecha-marzo">Marzo</button>
+            <button class="btn-fecha" id="fecha-abril">Abril</button>
+            <button class="btn-fecha" id="fecha-mayo">Mayo</button>
+            <button class="btn-fecha">Julio</button>
+            <button class="btn-fecha">Junio</button>
+            <button class="btn-fecha">Agosto</button>
+            <button class="btn-fecha">Septiembre</button>
+            <button class="btn-fecha">Octubre</button>
+            <button class="btn-fecha">Noviembre</button>
+            <button class="btn-fecha">Diciembre</button>
+        </fieldset>
+
+        <!-- Proporciones de Gasto -->
+        <fieldset class="proporcion">
+            <legend>Proporción de Gasto</legend>
+            <p id="proporcion"></p>
+        </fieldset>
+
+        <!-- Conclusiones -->
+        <fieldset class="profit">
+            <legend>Conclusiones</legend>
+            <p><span id="balance">0</span>€</p>
+        </fieldset>
+    </main>
+
+    <!-- Botones para agregar y guardar datos -->
+    <div>
+        <button id="agregar">Agregar Datos</button>
+        <button id="guardar">Guardar Datos</button>
+    </div>
+
+
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/elpambi" target="_blank">
+                <img src="../assets/img/github.png" alt="Github_logo">
+            </a>
+            <a href="https://www.linkedin.com/in/pablo-ruiz-carbonero-6770012ab/" target="_blank">
+                <img src="../assets/img/linkedin.png" alt="Linkedin_logo">
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

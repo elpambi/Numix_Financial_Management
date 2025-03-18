@@ -1,0 +1,241 @@
+body {
+    font-family: 'M PLUS 2 Variable', sans-serif;
+    background-image: url(../assets/img/wallapper2.jpg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.main {
+    display: grid;
+    height: 80%;
+    width: 80%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 16px;
+    padding: 18px;
+}
+
+.main::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.31);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.title {
+    font-family: 'M PLUS 2 Variable', sans-serif;
+    grid-column: span 6;
+    grid-row: span 1;
+    background-color: rgba(255, 182, 193, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingresos {
+    font-family: 'M PLUS 2 Variable', sans-serif;
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: rgba(173, 255, 47, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.balance {
+    font-family: 'M PLUS 2 Variable', sans-serif;
+    grid-column: span 4;
+    grid-row: span 3;
+    background-color: rgba(255, 255, 224, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gastos {
+    font-family: 'M PLUS 2 Variable', sans-serif;
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: rgba(210, 180, 140, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categorias {
+    font-family: 'M PLUS 2 Variable', sans-serif;
+    grid-column: span 1;
+    grid-row: span 5;
+    background-color: rgba(144, 238, 144, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fecha {
+    font-family: 'M PLUS 2 Variable', sans-serif;
+    grid-column: span 1;
+    grid-row: span 4;
+    background-color: rgba(255, 160, 122, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proporcion {
+    font-family: 'M PLUS 2 Variable', sans-serif;
+    grid-column: span 4;
+    grid-row: span 3;
+    background-color: rgba(245, 245, 245, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profit {
+    font-family: 'M PLUS 2 Variable', sans-serif;
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: rgba(255, 248, 220, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#agregar, #guardar {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    outline: none;
+    width: 300px;
+    margin: 10px;
+}
+
+#agregar:hover, #guardar:hover {
+    background-color: #fff;
+    color: #222;
+    transform: scale(1.05);
+}
+
+#agregar:focus, #guardar:focus {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #388e3c;
+}
+
+button.btn-categoria, button.btn-fecha {
+    width: auto;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Botones para categorías y fechas con flex-wrap */
+fieldset.categorias, fieldset.fecha {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en varias filas si es necesario */
+}
+
+button.btn-categoria:hover, button.btn-fecha:hover {
+    background-color: #0b7dda;
+}
+
+button.btn-categoria.active, button.btn-fecha.active {
+    background-color: #0b7dda;
+    transform: scale(1.1);  /* Efecto visual de agrandarse un poco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+canvas {
+    margin-top: 30px;
+    max-width: 100%;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
